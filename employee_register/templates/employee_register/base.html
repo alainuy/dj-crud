@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+      .top-margin {
+        margin-top: 50px; /* You can tweak this value */
+      }
+    </style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <title>XYZ Inc</title>
+</head>
+<body>    
+
+<div class="container">  
+<div class="card-panel grey lighten-4">
+  <div class="container">
+    <h3 class="left-align top-margin">XYZ Incorporated</h3>
+<p class="flow-text">{% block title %}{% endblock title %}</p>
+    <hr class="divider">
+    <h3>
+      
+    </h3>
+    {% block content %}{% endblock content%}
+  </div>
+</div>
+</div>
+
+
+
+
+
+</body>
+</html>

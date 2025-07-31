@@ -1,0 +1,45 @@
+{% extends "employee_register/base.html" %}
+
+{% block title %}
+
+Employee List
+
+{% endblock title%}
+
+{% block content %}
+
+<p>This is the current list of employees:</p> 
+
+<table class="highlight">
+
+    <thead>
+        <tr>
+            <th>Full Name</th>
+            <th>Employee ID</th>
+            <th>Email Address</th>
+            <th>Position</th>
+            <th>Join Date</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+
+    <tbody>
+      {% for employee in employee_list %}
+          <tr>
+            <td>{{employee.fullname}} </td>
+            <td>{{employee.empid}} </td>
+            <td>{{employee.email}} </td>
+            <td>{{employee.position}}</td>
+            <td>{{employee.joindate}}</td>
+            <td>
+              <a href="{% url 'edit_employee' employee.id %}" class="waves-effect waves-light btn-small"><i class="material-icons center">edit</i></a>
+              <a href="" class="waves-effect waves-light red btn-small"><i class="material-icons center">delete_forever</i></a>
+            </td>
+          </tr>
+      {% endfor %}
+
+    </tbody>
+
+</table>
+
+{% endblock content%}
